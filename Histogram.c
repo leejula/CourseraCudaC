@@ -1,5 +1,5 @@
 // Histogram Equalization
-,nk
+
 #include    <wb.h>
 #define wbCheck(stmt) do {                                                    \
         cudaError_t err = stmt;                                               \
