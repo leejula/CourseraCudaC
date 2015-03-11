@@ -1,3 +1,4 @@
+//vec addition with streams
 #include	<wb.h>
 #define SegSize 256
 
