@@ -1,4 +1,4 @@
-//vec addition with streams
+//vector addition with streams
 #include	<wb.h>
 #define SegSize 256
 
@@ -49,9 +49,13 @@ cudaStreamCreate(&stream2);
 cudaStreamCreate(&stream3);
 
 //Allocating pinned memory for host source and destination
-wbCheck(cudaHostAlloc((void **)&hostInput1, inputLength* sizeof(float),cudaHostAllocDefault));	
-wbCheck(cudaHostAlloc((void **)&hostInput2, inputLength* sizeof(float),cudaHostAllocDefault));	
-wbCheck(cudaHostAlloc((void **)&hostOutput, inputLength* sizeof(float),cudaHostAllocDefault));	
+//wbCheck(cudaHostAlloc((void **)&hostInput1, inputLength* sizeof(float),cudaHostAllocDefault));	
+//wbCheck(cudaHostAlloc((void **)&hostInput2, inputLength* sizeof(float),cudaHostAllocDefault));	
+//wbCheck(cudaHostAlloc((void **)&hostOutput, inputLength* sizeof(float),cudaHostAllocDefault));
+
+//wbCheck(cudaMalloc((void **)&hostInput1, inputLength* sizeof(float)));	
+//wbCheck(cudaMalloc((void **)&hostInput2, inputLength* sizeof(float)));	
+//wbCheck(cudaMalloc((void **) &hostOutput, inputLength* sizeof(float)));
     args = wbArg_read(argc, argv);
 
     wbTime_start(Generic, "Importing data and creating memory on host");
